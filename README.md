@@ -5,8 +5,8 @@
 ```
 git clone https://github.com/Jekub/Wapiti.git
 cd Wapiti
-make
-make install
+sudo make
+sudo make install
 ./wapiti (有帮助文档输出表示安装成功)
 ```
 
@@ -14,15 +14,7 @@ make install
 
 1、如果make失败，先安装gcc
 
-2、如果出现报错“Permission denied”：
-
-```
-vim Makefile
-```
-
-修改PREFIX =.
-
-3、如果git不成功，直接下载到工作目录解压后make
+2、如果git不成功，直接下载到工作目录解压后make
 
 
 ## 数据准备
@@ -36,7 +28,7 @@ git clone https://github.com/ouyangsizhuo/2021Spring_CRF_AGACtask1.git
 ## 训练模型
 
 ```
-wapiti train -a agd-l1 -t 3 -i 10 -p pat/Tok321dis.pat <(cat AGAC/train_split/*.txt) AGAC/mod/AGAC_train.mod
+wapiti train -a sgd-l1 -t 3 -i 10 -p pat/Tok321dis.pat <(cat AGAC/train_split/*.txt) AGAC/mod/AGAC_train.mod
 ```
 
 ## 预测标签
