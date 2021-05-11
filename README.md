@@ -40,6 +40,6 @@ wapiti label -c -m AGAC/mod/AGAC_train.mod <(cat AGAC/test_split/*.txt) AGAC/tra
 ## 评估结果
 
 ```
-perl conllevel.pl -d $'\t' <AGAC/train_out.tab | tee AGAC/train_out.eval
+perl conlleval.pl -d $'\t' <AGAC/train_out.tab | tee AGAC/train_out.eval
 ```
 
